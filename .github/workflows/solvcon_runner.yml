@@ -36,7 +36,7 @@ jobs:
         restore-keys: |
           brew-${{ runner.os }}-
     - name: Dependency (macOS)
-      if: matrix.os == 'macos-latest'
+      if: matrix.os == 'macos-15-intel'
       run: |
         brew update --quiet
         brew install --cask mactex-no-gui
