@@ -22,11 +22,11 @@ jobs:
       run: |
         source contrib/ci-setup-ssh.sh
     - name: Dependency (Ubuntu)
-      if: matrix.os != 'macos-latest'
+      if: matrix.os != 'macos-15-intel'
       run: |
         source ${DEVENV_WORKSPACE}/contrib/ci-setup-apt.sh
     - name: Cache Homebrew downloads (macOS)
-      if: matrix.os == 'macos-latest'
+      if: matrix.os == 'macos-15-intel'
       uses: actions/cache@v4
       with:
         path: |
@@ -36,7 +36,7 @@ jobs:
         restore-keys: |
           brew-${{ runner.os }}-
     - name: Dependency (macOS)
-      if: matrix.os == 'macos-latest'
+      if: matrix.os == 'macos-15-intel'
       run: |
         brew update --quiet
         brew install --cask mactex-no-gui
