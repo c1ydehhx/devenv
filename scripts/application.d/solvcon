@@ -6,7 +6,7 @@ application_name=solvcon
 application_branch=${VERSION:-master}
 application_full=$application_name-$application_branch
 application_src=${DEVENVROOT}/flavors/${DEVENVFLAVOR}/src/${application_full}
-application_upstream_project_root=${APP_UPSTREAM_PROJECT_ROOT:-https://github.com/solvcon}
+application_upstream_project_root=${APP_UPSTREAM_PROJECT_ROOT:-https://github.com/c1ydehhx}
 
 syncgit ${application_upstream_project_root} ${application_name} ${application_branch}
 
